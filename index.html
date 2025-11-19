@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Mystic Portal — For Shub</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="bg" class="bg"></canvas>
+
+  <main id="root" class="root">
+    <header class="header">
+      <div class="logo">MYSTIC PORTAL</div>
+      <div class="small">A refined Princess Day gift</div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-title">For <span id="playerName">Shub</span></div>
+        <p class="hero-sub">A calm, cinematic experience — collect, play, and earn a real certificate. The bracelet is important. Treat it with care.</p>
+
+        <div class="hero-actions">
+          <button id="enterBtn" class="btn primary">Enter the Portal</button>
+          <a href="certificate.html" class="btn ghost" id="viewCert">View Certificate</a>
+        </div>
+
+        <div class="note">
+          <strong>Note:</strong> This site is optimized for mobile & desktop. If anything fails, try refreshing.
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="portal-screen">
+          <!-- subtle portal glyph -->
+          <svg viewBox="0 0 200 200" class="glyph" aria-hidden="true">
+            <defs>
+              <linearGradient id="lg" x1="0" x2="1">
+                <stop offset="0" stop-color="#fff0fb"/>
+                <stop offset="1" stop-color="#ffd6f3"/>
+              </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="86" fill="url(#lg)" stroke="#ffd1ea" stroke-width="2"></circle>
+            <g stroke="#d63f8f" stroke-width="2" fill="none" stroke-linecap="round">
+              <path d="M50 120 C72 150,128 150,150 120"/>
+              <path d="M60 90 C85 120,115 120,140 90"/>
+            </g>
+          </svg>
+
+          <figure class="bracelet-preview">
+            <img src="assets/bracelet.jpg" alt="Bracelet (important)" id="braceletImg">
+            <figcaption>Bracelet — heirloom token</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer muted">Cinematic • anime-tinged • gym-friendly</footer>
+  </main>
+
+<script src="app.js" defer></script>
+</body>
+</html>
