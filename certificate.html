@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Certificate — Mystic Portal</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <main style="max-width:980px;margin:40px auto;padding:18px;text-align:center">
+    <h1>Certificate</h1>
+    <p class="muted">If the certificate was generated from the portal it will appear below. You can download it.</p>
+    <div id="wrap" style="margin-top:18px">
+      <img id="certImg" style="max-width:100%;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,0.18)" alt="Certificate">
+    </div>
+    <div style="margin-top:14px">
+      <button id="save" class="btn primary">Save Image</button>
+      <a href="index.html" class="btn ghost">Back</a>
+    </div>
+  </main>
+
+<script>
+const img = document.getElementById('certImg');
+const data = localStorage.getItem('mystic_cert');
+if(data){ img.src = data; } else { img.alt = 'No certificate found. Generate via the portal.'; }
+document.getElementById('save').addEventListener('click', ()=>{
+  if(!img.src) return alert('No certificate to save.');
+  const a = document.createElement('a'); a.href = img.src; a.download = 'Shub_mystic_certificate.png'; a.click();
+});
+</script>
+</body>
+</html>
